@@ -27,9 +27,6 @@ nom_label.pack(side = "left")
 nom_zone_texte = tk.Entry(nom_cadre) # kant nom_fenetre
 nom_zone_texte.pack(side = "left") 
 
-# AJOUTER BOUTTON 
-#nom_bouton = tk.Button(nom_cadre, text = "Calculer les moyennes", command=Calculer) # TODO : FIND OPTION N#3
-#nom_bouton.pack(pady=10, side=tk.BOTTOM) # TODO : fix me im waaay up
 
 # TASK 2 
 # AJOUTER UN CADRE
@@ -70,12 +67,17 @@ nom_label_examen.pack(side = "left")
 nom_zone_texte_examen = tk.Entry(nom_cadre_examen) # kant nom_fenetre
 nom_zone_texte_examen.pack(side = "left") 
 
+#*********** FRAME FOR BOUTTON *****************
+nom_cadre_boutton = tk.Frame(nom_fenetre)
+nom_cadre_boutton.pack(pady=10)
+
+# AJOUTER BOUTTON 
+nom_bouton = tk.Button(nom_cadre_boutton, text = "Calculer les moyennes", command=Calculer, cursor = "heart") # TODO : FIND OPTION N#3
+# FIXED
+nom_bouton.pack(pady=10, side = "left") # TODO : fix me im waaay up
 
 # start of fenetre
 nom_fenetre.mainloop()
 
 
 
-
-
- 
