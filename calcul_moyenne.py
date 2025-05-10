@@ -54,7 +54,7 @@ nom_label3.pack(side = "left")
 nom_zone_texte3 = tk.Entry(nom_cadre3) # kant nom_fenetre
 nom_zone_texte3.pack(side = "left") 
 
-# TASK : 3 
+# TASK : 4 
 # AJOUTER UN CADRE
 nom_cadre_examen = tk.Frame(nom_fenetre)
 nom_cadre_examen.pack(pady=5)
@@ -75,6 +75,21 @@ nom_cadre_boutton.pack(pady=10)
 nom_bouton = tk.Button(nom_cadre_boutton, text = "Calculer les moyennes", command=Calculer, cursor = "heart") # TODO : FIND OPTION N#3
 # FIXED
 nom_bouton.pack(pady=10, side = "left") # TODO : fix me im waaay up
+
+# ****** AFFICHAGE *************
+# AJOUTER UN CADRE
+nom_cadre_resultat = tk.Frame(nom_fenetre)
+nom_cadre_resultat.pack(pady=5)
+
+# AJOUTER LABEL
+nom_label_resultat = tk.Label(nom_cadre_resultat, text = "Resultat : ")
+nom_label_resultat.pack(side = "left")
+
+# AJOUTER ZONE DE TEXTE
+nom_zone_texte_resultat = tk.Entry(nom_cadre_resultat) # kant nom_fenetre
+nom_zone_texte_resultat.pack(side = "left") 
+
+
 
 # start of fenetre
 nom_fenetre.mainloop()
