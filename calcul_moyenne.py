@@ -2,7 +2,28 @@ import tkinter as tk
 from tkinter import messagebox
 
 def Calculer():
-    print("hiii")
+    note1 = nom_zone_texte.get()
+    note2 = nom_zone_texte2.get()
+    note3 = nom_zone_texte3.get()
+    examen = nom_zone_texte_examen.get()
+
+
+    # TODO : make it a list laterrrrrr
+    if(note1.replace('.', '').isdigit()) and note2.replace('.', '').isdigit() and note3.replace('.', '').isdigit() and examen.replace('.', '').isdigit():
+        note1 = float(note1)
+        note2 = float(note2)
+        note3 = float(note3)
+        examen = float(examen)
+        if 0<= note1 <= 20 and 0<= note2 <= 20 and 0<= note3 <= 20 and 0<= examen <= 20:
+            moyenne = ((note1 + note2 + note3) / 3 + examen) / 2 
+            nom_zone_texte_resultat.delete(0, tk.END)
+            nom_zone_texte_resultat.insert(0, f"{moyenne:.2f}")
+        else:
+            messagebox.showerror("Erreur", "Les notes doivent etre compris entre 0 et 20")
+
+    else:
+        messagebox.showerror("Erreur", "Vous devez entrer un nombre")
+
 
 # Creation d'une fenetre 
 nom_fenetre = tk.Tk()
